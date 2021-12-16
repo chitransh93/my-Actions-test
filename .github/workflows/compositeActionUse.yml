@@ -10,9 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Do anything elsee
-      run: echo Pretend to do other things 
-
     # Uses the Composite Action
     - name: Build and Push the image
       uses: chitransh93/CompositeAction/action.yml@main
