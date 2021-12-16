@@ -9,12 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
     # Uses the Composite Action
-    - name: Build and Push the image
-      uses: chitransh93/CompositeAction/action.yml@main
-      with:
-        registry_username: ${{secrets.DOCKER_USERNAME}}
-        registry_password: ${{secrets.DOCKER_PASSWORD}}
-        image_name: maven-container
-        tag: $GITHUB_RUN_NUMBER
+    #- name: Build and Push the image
+    #  uses: chitransh93/CompositeAction/action.yml@main
+    #  with:
+    #    registry_username: ${{secrets.DOCKER_USERNAME}}
+    #    registry_password: ${{secrets.DOCKER_PASSWORD}}
+    #    image_name: maven-container
+    #    tag: $GITHUB_RUN_NUMBER
