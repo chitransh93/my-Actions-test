@@ -1,0 +1,23 @@
+name: Use the Composite Action with Actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Do anything elsee
+        run: echo Pretend to do other things 
+
+      # Uses the Composite Action
+      - name: Build and Push the image
+        uses: chitransh93/CompositeAction/action.yml@main
+        with:
+          registry_username: ${{secrets.DOCKER_USERNAME}}
+          registry_password: ${{secrets.DOCKER_PASSWORD}}
+          image_name: maven-container
+          tag: $GITHUB_RUN_NUMBER
