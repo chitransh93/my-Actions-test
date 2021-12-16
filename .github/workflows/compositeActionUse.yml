@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: chitransh93/my-Actions-test/.github/workflows/action.yml@main
+    - uses: chitransh93/CompositeAction@main
       with:
         registry_username: ${{secrets.DOCKER_USERNAME}}
         registry_password: ${{secrets.DOCKER_PASSWORD}}
